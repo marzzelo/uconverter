@@ -1,0 +1,21 @@
+{
+    "name": "doba/uconverter",
+    "description": "Customizable Physical Unit Converter - Demo library - Please do not use it in production",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marcelo Valdez",
+            "email": "zedlavolecram@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Doba\\Uconverter\\": "src/"
+        }
+    }
+}
