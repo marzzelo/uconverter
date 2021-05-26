@@ -1,9 +1,9 @@
 <?php
 
 
-namespace Doba\Uconverter\Providers;
+namespace Marzzelo\Uconverter\Providers;
 
-use Doba\Uconverter\Support\Container;
+use Marzzelo\Uconverter\Support\Container;
 
 abstract class Provider
 {

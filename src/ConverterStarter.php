@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Doba\Uconverter;
+namespace Marzzelo\Uconverter;
 
-use Doba\Uconverter\Facades\Facade;
-use Doba\Uconverter\Support\Container;
-use Doba\Uconverter\Providers\FConverterProvider;
-use Doba\Uconverter\Providers\PConverterProvider;
+use Marzzelo\Uconverter\Facades\Facade;
+use Marzzelo\Uconverter\Support\Container;
+use Marzzelo\Uconverter\Providers\FConverterProvider;
+use Marzzelo\Uconverter\Providers\PConverterProvider;
 
 class ConverterStarter
 {

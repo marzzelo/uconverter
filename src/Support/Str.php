@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Doba\Uconverter\Support;
+namespace Marzzelo\Uconverter\Support;
 
 
 class Str

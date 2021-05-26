@@ -3,11 +3,11 @@
 namespace Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
-use Doba\Uconverter\UnitsConverter;
-use Doba\Uconverter\ConverterStarter;
-use Doba\Uconverter\Facades\FConverter;
-use Doba\Uconverter\Facades\PConverter;
-use Doba\Uconverter\Exceptions\UnitsConverterException;
+use Marzzelo\Uconverter\UnitsConverter;
+use Marzzelo\Uconverter\ConverterStarter;
+use Marzzelo\Uconverter\Facades\FConverter;
+use Marzzelo\Uconverter\Facades\PConverter;
+use Marzzelo\Uconverter\Exceptions\UnitsConverterException;
 
 class UnitsConverterTest extends TestCase
 {

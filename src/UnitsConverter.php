@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Doba\Uconverter;
+namespace Marzzelo\Uconverter;
 
-use Doba\Uconverter\Support\Model;
-use Doba\Uconverter\Exceptions\UnitsConverterException;
+use Marzzelo\Uconverter\Support\Model;
+use Marzzelo\Uconverter\Exceptions\UnitsConverterException;
 
 class UnitsConverter extends Model
 {
@@ -16,7 +16,7 @@ class UnitsConverter extends Model
 	}
 
 	/**
-	 * @throws \Doba\Uconverter\Exceptions\UnitsConverterException
+	 * @throws \Marzzelo\Uconverter\Exceptions\UnitsConverterException
 	 */
 	public function getAttribute($name)
 	{
@@ -24,7 +24,7 @@ class UnitsConverter extends Model
 	}
 
 	/**
-	 * @throws \Doba\Uconverter\Exceptions\UnitsConverterException
+	 * @throws \Marzzelo\Uconverter\Exceptions\UnitsConverterException
 	 */
 	private function multiple($name): ?float
 	{

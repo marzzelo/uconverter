@@ -1,12 +1,12 @@
 <?php
 
-namespace Doba\Uconverter\Support;
+namespace Marzzelo\Uconverter\Support;
 
 use Closure;
 use ReflectionClass;
 use ReflectionException;
 use InvalidArgumentException;
-use Doba\Uconverter\Exceptions\ContainerException;
+use Marzzelo\Uconverter\Exceptions\ContainerException;
 
 class Container
 {
@@ -54,7 +54,7 @@ class Container
 	}
 
 	/**
-	 * @throws \Doba\Exceptions\ContainerException|\ReflectionException
+	 * @throws \Marzzelo\Exceptions\ContainerException|\ReflectionException
 	 */
 	public function make($name, array $arguments = [])
 	{
@@ -86,7 +86,7 @@ class Container
 
 	/**
 	 * @throws \ReflectionException
-	 * @throws \Doba\Exceptions\ContainerException
+	 * @throws \Marzzelo\Exceptions\ContainerException
 	 */
 	public function build($name, array $arguments = [])
 	{

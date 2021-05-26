@@ -1,6 +1,6 @@
 <?php
 
-namespace Doba\Uconverter\Exceptions;
+namespace Marzzelo\Uconverter\Exceptions;
 
 use Exception;
 

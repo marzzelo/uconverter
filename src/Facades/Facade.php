@@ -1,9 +1,9 @@
 <?php
 
-namespace Doba\Uconverter\Facades;
+namespace Marzzelo\Uconverter\Facades;
 
 use Exception;
-use Doba\Uconverter\Support\Container;
+use Marzzelo\Uconverter\Support\Container;
 
 abstract class Facade
 {

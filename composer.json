@@ -1,5 +1,5 @@
 {
-    "name": "doba/uconverter",
+    "name": "marzzelo/uconverter",
     "description": "Customizable Physical Unit Converter - Demo library - Please do not use it in production",
     "type": "library",
     "license": "MIT",
@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Doba\\Uconverter\\": "src/"
+            "Marzzelo\\Uconverter\\": "src/"
         }
     }
 }

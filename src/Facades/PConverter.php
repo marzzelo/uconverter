@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Doba\Uconverter\Facades;
+namespace Marzzelo\Uconverter\Facades;
 
 
 class PConverter extends Facade

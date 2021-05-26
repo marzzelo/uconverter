@@ -1,8 +1,8 @@
 <?php
 
-namespace Doba\Uconverter\Providers;
+namespace Marzzelo\Uconverter\Providers;
 
-use Doba\Uconverter\UnitsConverter;
+use Marzzelo\Uconverter\UnitsConverter;
 
 class PConverterProvider extends Provider
 {
