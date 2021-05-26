@@ -2,11 +2,11 @@
 
 namespace Tests\Unit;
 
+use PHPUnit\Framework\TestCase;
 use Doba\Uconverter\UnitsConverter;
 use Doba\Uconverter\ConverterStarter;
 use Doba\Uconverter\Facades\FConverter;
 use Doba\Uconverter\Facades\PConverter;
-use PHPUnit\Framework\TestCase;
 use Doba\Uconverter\Exceptions\UnitsConverterException;
 
 class UnitsConverterTest extends TestCase
