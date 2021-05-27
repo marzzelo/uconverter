@@ -30,7 +30,7 @@ $conversor->lbf = 2.2046;
 $conversor->kgf(2.2046, 'klbf'));  // 1000
 ```
 ### multiples & submultiples
-prefixes than can be used:
+Included prefixes:
 
 ```
                 'da' => 10,
@@ -53,5 +53,26 @@ prefixes than can be used:
 Example (TeraNewtons to microNewtons):
 ```
 $conversor->uN(1.0, 'TN'));  //  1.0e+18
+`````
+### Included Converters
+To use included converters, **`ConverterStarter::start`** should be called.
+After calling `start`, some included converters will be auto-instantiated.
+
+They can be used through their facades:
+
 ```
+print FConverter::kgf(1, 'daN');  // 1.019721
+print PConverter::Pa(1, 'MPa');  // 1000000.0
+```
+
+## Available units 
+### FConverter
+N, lbf, gf, ouncef, poundf, dyne, sthene
+and their multiples:
+daN, kN, klbf, kgf, kpoundf, etc.
+
+### PConverter
+psi, Pa, gmm2, bar, atm, mHg, inHg, inH2O, torr
+and their multiples:
+kPa, hPa, MPa, kgmm2, cmHg, mmHg, mbar, etc. 
 
