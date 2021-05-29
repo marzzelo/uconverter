@@ -43,12 +43,6 @@ abstract class Facade
 	public static function __callStatic($method, $args)
 	{
 		$object = static::getInstance();
-		return match (count($args)) {
-			0 => $object->$method(),
-			1 => $object->$method($args[0]),
-			2 => $object->$method($args[0], $args[1]),
-			3 => $object->$method($args[0], $args[1], $args[2]),
-			default => call_user_func_array([$object, $method], $args),
-		};
+		call_user_func_array([$object, $method], $args);
 	}
 }

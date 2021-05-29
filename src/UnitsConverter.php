@@ -10,7 +10,7 @@ class UnitsConverter extends Model
 {
 	public function __call($name, $arguments) // $convert->N(10, 'kgf')
 	{
-		return (($this->$name != null) && ($this->{$arguments[1]} != null))
+		return (!empty($this->$name) && !empty($this->{$arguments[1]}))
 			? ($this->$name / $this->{$arguments[1]} * $arguments[0])
 			: null;
 	}

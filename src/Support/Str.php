@@ -6,7 +6,7 @@ namespace Marzzelo\Uconverter\Support;
 
 class Str
 {
-	public static function studly($value): array|string
+	public static function studly($value)
 	{
 		$result = ucwords(str_replace('_', ' ', $value));
 

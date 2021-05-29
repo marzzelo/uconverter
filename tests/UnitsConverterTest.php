@@ -1,7 +1,5 @@
 <?php
 
-namespace Tests\Unit;
-
 use PHPUnit\Framework\TestCase;
 use Marzzelo\Uconverter\UnitsConverter;
 use Marzzelo\Uconverter\ConverterStarter;
