@@ -1,14 +1,44 @@
 <?php
 
+namespace Marzzelo\Tests;
+
 use PHPUnit\Framework\TestCase;
 use Marzzelo\Uconverter\UnitsConverter;
-use Marzzelo\Uconverter\ConverterStarter;
-use Marzzelo\Uconverter\Facades\FConverter;
-use Marzzelo\Uconverter\Facades\PConverter;
 use Marzzelo\Uconverter\Exceptions\UnitsConverterException;
 
 class UnitsConverterTest extends TestCase
 {
+	/** @test */
+	public function assigning_alpha_value_throws_exception()
+	{
+		$conversor = new UnitsConverter;
+		$this->expectException('Marzzelo\Uconverter\Exceptions\UnitsConverterException');
+		$this->expectExceptionMessage('The [kgf] value must be numeric');
+
+		$conversor->kgf = 'x';
+	}
+
+	/** @test */
+	public function assigning_zero_value_throws_exception()
+	{
+		$conversor = new UnitsConverter;
+		$this->expectException('Marzzelo\Uconverter\Exceptions\UnitsConverterException');
+		$this->expectExceptionMessage('The [kgf] value must be greater than zero');
+
+		$conversor->kgf = 0;
+	}
+
+	/** @test */
+	public function assigning_zero_value_in_the_constructor_throws_exception()
+	{
+		$this->expectException('Marzzelo\Uconverter\Exceptions\UnitsConverterException');
+		$this->expectExceptionMessage('The [kgf] value must be greater than zero');
+
+		$conversor = new UnitsConverter([
+			'kgf' => 0,
+		]);
+	}
+
 	/** @test */
 	public function it_creates_a_property_dinamically()
 	{
@@ -22,6 +52,8 @@ class UnitsConverterTest extends TestCase
 		$conversor->lbf = 2.2046;
 		$this->assertEquals(2.2046, $conversor->lbf);
 		$this->assertEquals(1.0, $conversor->kgf(2.2046, 'lbf'));
+
+		$this->assertEquals(1000, $conversor->lbf(1, 'klbf'));
 		$this->assertEquals(1000.0, $conversor->kgf(2.2046, 'klbf'));
 	}
 
@@ -30,7 +62,7 @@ class UnitsConverterTest extends TestCase
 	{
 		$conversor = new UnitsConverter([
 			'gf' => 1000.0,
-			'N'   => 9.8066,
+			'N'  => 9.8066,
 		]);
 
 		$this->assertEquals(98.066, $conversor->N(10.0, 'kgf'));
@@ -88,14 +120,17 @@ class UnitsConverterTest extends TestCase
 		$conversor->ky(1.0, 'x');   // Unknown TO
 	}
 
+
 	/** @test */
-	public function it_uses_facades()
+	public function it_gets_included_converters()
 	{
-		ConverterStarter::start();
+		$fconversor = UnitsConverter::getConverter('force');
+		$pconversor = UnitsConverter::getConverter('pressure');
 
-		$this->assertEquals(10, FConverter::N(1, 'daN'));
-
-		$this->assertEquals(145.0377439, PConverter::psi(1, 'MPa'));
+		$this->assertEquals(9.806652048217, $fconversor->N(1, 'kgf'));
+		$this->assertEquals(1e6, $pconversor->Pa(1, 'MPa'));
 	}
+
+
 
 }

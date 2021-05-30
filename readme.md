@@ -55,24 +55,29 @@ Example (TeraNewtons to microNewtons):
 $conversor->uN(1.0, 'TN'));  //  1.0e+18
 `````
 ### Included Converters
-To use included converters, **`ConverterStarter::start`** should be called.
-After calling `start`, some included converters will be auto-instantiated.
-
-They can be used through their facades:
+To use included converters, use the static `UnitsConverter::getConverter(name)`.  
+'force' and 'pressure' converters are included.
 
 ```
-print FConverter::kgf(1, 'daN');  // 1.019721
-print PConverter::Pa(1, 'MPa');  // 1000000.0
+$fconverter = UnitsConverter::getConverter('force');
+$pconverter = UnitsConverter::getConverter('pressure');
+
+print $fconverter->N(1, 'kgf'); // 9.806652048217
+print $pconverter->Pa(1, 'MPa'));  // 1e6
 ```
 
 ## Available units 
-### FConverter
-N, lbf, gf, ouncef, poundf, dyne, sthene
-and their multiples:
-daN, kN, klbf, kgf, kpoundf, etc.
+### Force
+_N, lbf, gf, ouncef, poundf, dyne, sthene_
 
-### PConverter
-psi, Pa, gmm2, bar, atm, mHg, inHg, inH2O, torr
 and their multiples:
-kPa, hPa, MPa, kgmm2, cmHg, mmHg, mbar, etc. 
+
+_daN, kN, klbf, kgf, kpoundf, etc._
+
+### Pressure
+_psi, Pa, gmm2, bar, atm, mHg, inHg, inH2O, torr_
+
+and their multiples:
+
+_kPa, hPa, MPa, kgmm2, cmHg, mmHg, mbar, etc._ 
 
