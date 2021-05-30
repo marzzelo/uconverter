@@ -131,6 +131,4 @@ class UnitsConverterTest extends TestCase
 		$this->assertEquals(1e6, $pconversor->Pa(1, 'MPa'));
 	}
 
-
-
 }
