@@ -12,4 +12,9 @@ class Str
 
 		return str_replace(' ', '', $result);
 	}
+
+	public static function beginsWith(string $name, string $root): bool
+	{
+		return substr($name, 0, strlen($root)) == $root;
+	}
 }

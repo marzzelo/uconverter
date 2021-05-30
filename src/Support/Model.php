@@ -14,7 +14,9 @@ abstract class Model
 
 	public function fill(array $attributes = [])
 	{
-		$this->attributes = $attributes;
+		foreach ($attributes as $name => $value) {
+			$this->setAttribute($name, $value);
+		}
 	}
 
 	public function getAttributes(): array
@@ -45,6 +47,7 @@ abstract class Model
 
 	public function getAttributeValue($name)
 	{
+		// printf("\nModel: getAttributeValue($name): " . $this->attributes[$name] ?? "null");
 		return $this->attributes[$name] ?? null;
 	}
 
