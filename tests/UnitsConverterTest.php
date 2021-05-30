@@ -122,7 +122,7 @@ class UnitsConverterTest extends TestCase
 
 
 	/** @test */
-	public function it_gets_included_converters()
+	public function it_tests()
 	{
 		$fconversor = UnitsConverter::getConverter('force');
 		$pconversor = UnitsConverter::getConverter('pressure');
@@ -130,7 +130,5 @@ class UnitsConverterTest extends TestCase
 		$this->assertEquals(9.806652048217, $fconversor->N(1, 'kgf'));
 		$this->assertEquals(1e6, $pconversor->Pa(1, 'MPa'));
 	}
-
-
 
 }

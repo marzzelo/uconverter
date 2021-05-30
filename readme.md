@@ -59,25 +59,25 @@ To use included converters, use the static `UnitsConverter::getConverter(name)`.
 'force' and 'pressure' converters are included.
 
 ```
-$fconverter = UnitsConverter::getConverter('force');
-$pconverter = UnitsConverter::getConverter('pressure');
+$fconversor = UnitsConverter::getConverter('force');
+$pconversor = UnitsConverter::getConverter('pressure');
 
-print $fconverter->N(1, 'kgf'); // 9.806652048217
-print $pconverter->Pa(1, 'MPa'));  // 1e6
+print $fconversor->N(1, 'kgf'); // 9.806652048217
+print $pconversor->Pa(1, 'MPa'));  // 1e6
 ```
 
 ## Available units 
 ### Force
-_N, lbf, gf, ouncef, poundf, dyne, sthene_
+__N, lbf, gf, ouncef, poundf, dyne, sthene_
 
 and their multiples:
 
-_daN, kN, klbf, kgf, kpoundf, etc._
+_daN, kN, klbf, kgf, kpoundf, etc.__
 
 ### Pressure
-_psi, Pa, gmm2, bar, atm, mHg, inHg, inH2O, torr_
+__psi, Pa, gmm2, bar, atm, mHg, inHg, inH2O, torr_
 
 and their multiples:
 
-_kPa, hPa, MPa, kgmm2, cmHg, mmHg, mbar, etc._ 
+_kPa, hPa, MPa, kgmm2, cmHg, mmHg, mbar, etc.__ 
 
