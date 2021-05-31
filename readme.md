@@ -56,14 +56,16 @@ $conversor->uN(1.0, 'TN'));  //  1.0e+18
 `````
 ### Included Converters
 To use included converters, use the static `UnitsConverter::getConverter(name)`.  
-'force' and 'pressure' converters are included.
+'force', 'length' and 'pressure' converters are included.
 
 ```
 $fconverter = UnitsConverter::getConverter('force');
 $pconverter = UnitsConverter::getConverter('pressure');
+$lconverter = UnitsConverter::getConverter('length');
 
 print $fconverter->N(1, 'kgf'); // 9.806652048217
 print $pconverter->Pa(1, 'MPa'));  // 1e6
+print $lconverter->(1, 'MPa'));  // 1e6
 ```
 
 ## Available units 
@@ -81,3 +83,10 @@ and their multiples:
 
 _kPa, hPa, MPa, kgmm2, cmHg, mmHg, mbar, etc._ 
 
+### Length
+
+_m, in, ft, hand, ly, mi, yd, pc, AU, Ao_
+
+and their multiples:
+
+_dm, cm, mm, um, dam, hm, km, ..._

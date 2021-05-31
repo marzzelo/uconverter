@@ -126,6 +126,18 @@ class UnitsConverter extends Model
 				'dyne'   => 9.806652048217 * 1e5,
 				'sthene' => 9.806652048217 * 1e-3,
 			],
+			'length' => [
+				'm' => 1,
+				'in' => 39.3700787,
+				'ft' => 3.2808399,
+				'hand' => 9.8425197,
+				'ly' =>1.0570008e-16,
+				'mi' => 0.0006214,
+				'yd' => 1.0936133,
+				'pc' => 3.2407787e-17,
+				'AU' => 6.684492e-12,
+				'Ao' => 1e10
+			]
 		];
 
 		return new UnitsConverter($table[$name]);
