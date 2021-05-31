@@ -1,6 +1,6 @@
 # uconverter
 
-[uconverter](https://github.com/marzzelo/uconverter) is a customizable physical units converter.
+[uconverter](https://github.com/marzzelo/uconverter) is a customizable units converter.
 
 
 ## Install
@@ -11,7 +11,7 @@ composer require marzzelo/uconverter
 ## Usage
 Instanciating a new units-converter:
 ```
-$conversor = new UnitsConverter([
+$converter = new UnitsConverter([
 		    'gf'  => 1000.0,
 		    'N'   => 9.8066,
 		    ...
@@ -21,13 +21,13 @@ $conversor = new UnitsConverter([
 
 Example: decaNewtons to kilograms:
 ```
-print $conversor->kgf(1, 'daN');  // 1.019721
+print $converter->kgf(1, 'daN');  // 1.019721
 ```
-Adding a new unit:
+Adding a new unit after construction:
 ```
-$conversor->lbf = 2.2046;
+$converter->lbf = 2.2046;
 
-$conversor->kgf(2.2046, 'klbf'));  // 1000
+$converter->kgf(2.2046, 'klbf');  // 1000
 ```
 ### multiples & submultiples
 Included prefixes:
@@ -52,10 +52,10 @@ Included prefixes:
 ```
 Example (TeraNewtons to microNewtons):
 ```
-$conversor->uN(1.0, 'TN'));  //  1.0e+18
+$converter->uN(1.0, 'TN');  //  1.0e+18
 `````
-### Included Converters
-To use included converters, use the static `UnitsConverter::getConverter(name)`.  
+### Using Included Converters
+To use included converters, use the static `UnitsConverter::getConverter(<name>)`.  
 'force', 'length' and 'pressure' converters are included.
 
 ```
@@ -63,12 +63,12 @@ $fconverter = UnitsConverter::getConverter('force');
 $pconverter = UnitsConverter::getConverter('pressure');
 $lconverter = UnitsConverter::getConverter('length');
 
-print $fconverter->N(1, 'kgf'); // 9.806652048217
-print $pconverter->Pa(1, 'MPa'));  // 1e6
-print $lconverter->(1, 'MPa'));  // 1e6
+print $fconverter->N(1, 'kgf');     // 9.806652048217
+print $pconverter->Pa(1, 'MPa');    // 1e6
+print $lconverter->cm(1, 'in');     // 2.5400000025908
 ```
 
-## Available units 
+## Available built-in units 
 ### Force
 _N, lbf, gf, ouncef, poundf, dyne, sthene_
 

@@ -22,7 +22,10 @@ class UnitsConverterTest extends TestCase
 
 	const LBF_PER_KGF                                       = 2.2046;
 
-	/** @test */
+	/**
+	 * Non-numeric expressions can not be used as values for units.
+	 * @test
+	 */
 	public function assigning_alpha_value_throws_exception()
 	{
 		$converter = new UnitsConverter;
